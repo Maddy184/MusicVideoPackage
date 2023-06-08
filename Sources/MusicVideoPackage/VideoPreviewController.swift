@@ -368,7 +368,7 @@ public class VideoPreviewerViewController: UIViewController, UIGestureRecognizer
     
     // Declaring the function for Custom AVPlayer
     func avplayerControl(){
-        if videoURLs?.lastPathComponent != ""{
+        if videoURLs?.lastPathComponent == ""{
             loader()
             player = AVPlayer(url: (videoURLs!))
             playerLayer = AVPlayerLayer(player: player)
