@@ -11,16 +11,16 @@ import AVKit
 public class imagePreviewViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
-    var animal = UIImage()
-    var nextImage = UIImage()
-    var img = [UIImage]()
-    var currentIndex = 0
-    var player = AVPlayer()
-    var playerLayer = AVPlayerLayer()
-    var PlayingButton:UIButton = UIButton()
-    var imageView:UIImageView = UIImageView()
-    var buttonPlay:UIButton = UIButton()
-    var scrollView:UIScrollView = UIScrollView()
+    public var animal = UIImage()
+    public var nextImage = UIImage()
+    public var img = [UIImage]()
+    public var currentIndex = 0
+    public var player = AVPlayer()
+    public var playerLayer = AVPlayerLayer()
+    public var PlayingButton:UIButton = UIButton()
+    public var imageView:UIImageView = UIImageView()
+    public var buttonPlay:UIButton = UIButton()
+    public var scrollView:UIScrollView = UIScrollView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ public class imagePreviewViewController: UIViewController, UIGestureRecognizerDe
     @IBAction func VideoPlayButtonTaped(_ sender: Any) {
         avplayerControl()
         print("ButtonTapped")
-//        print(img[currentIndex].details)
+        //        print(img[currentIndex].details)
     }
     
     func avplayerControl(){
@@ -61,22 +61,22 @@ public class imagePreviewViewController: UIViewController, UIGestureRecognizerDe
     func loadImageFile() {
         imageView.image = animal
         
-//        if img[currentIndex].details == "video"{
-//            buttonPlay.isHidden = false
-//        }else{
-//            buttonPlay.isHidden = true
-//        }
+        //        if img[currentIndex].details == "video"{
+        //            buttonPlay.isHidden = false
+        //        }else{
+        //            buttonPlay.isHidden = true
+        //        }
     }
     
     @objc func leftSwipeGesture (_ gesture: UISwipeGestureRecognizer) {
         if scrollView.zoomScale == 1{
             if gesture.direction == .left{
                 print("Hello Left")
-//                print(img[currentIndex].details)
-//                currentIndex += 1
-//                if currentIndex >= img.count {
-//                    currentIndex = 0
-//                }
+                //                print(img[currentIndex].details)
+                //                currentIndex += 1
+                //                if currentIndex >= img.count {
+                //                    currentIndex = 0
+                //                }
                 let nextIndex = currentIndex + 1
                 if nextIndex < img.count {
                     let nextMusicFileURL = img[nextIndex]
@@ -94,10 +94,10 @@ public class imagePreviewViewController: UIViewController, UIGestureRecognizerDe
         if scrollView.zoomScale == 1{
             if gesture.direction == .right{
                 print("Hello Right")
-//                currentIndex -= 1
-//                if currentIndex < 0 {
-//                    currentIndex = img.count - 1
-//                }
+                //                currentIndex -= 1
+                //                if currentIndex < 0 {
+                //                    currentIndex = img.count - 1
+                //                }
                 let previousIndex = currentIndex - 1
                 if previousIndex >= 0 {
                     let previousMusicFileURL = img[previousIndex]
@@ -121,12 +121,12 @@ public class imagePreviewViewController: UIViewController, UIGestureRecognizerDe
         }
     }
     @objc func playbuttonAction(_ sender : UIButton){
-//        if animal.details == "video"{
-//            buttonPlay.isHidden = false
-//            avplayerControl()
-//        }else{
-//            buttonPlay.isHidden = true
-//        }
+        //        if animal.details == "video"{
+        //            buttonPlay.isHidden = false
+        //            avplayerControl()
+        //        }else{
+        //            buttonPlay.isHidden = true
+        //        }
         
     }
     func setup(){
