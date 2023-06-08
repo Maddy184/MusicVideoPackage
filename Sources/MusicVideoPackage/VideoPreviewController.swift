@@ -216,7 +216,7 @@ import AVKit
 public class VideoPreviewerViewController: UIViewController, UIGestureRecognizerDelegate {
     
     //  Declaring the variable for Initialize
-    var animal = Photos()
+//    var animal = Photos()
     
     var videoLink = String()
     
