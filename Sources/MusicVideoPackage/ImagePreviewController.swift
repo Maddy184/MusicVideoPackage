@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-class imagePreviewViewController: UIViewController, UIGestureRecognizerDelegate {
+public class imagePreviewViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     var animal = UIImage()
